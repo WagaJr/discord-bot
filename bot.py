@@ -1,7 +1,7 @@
-import discord
 from discord.ext import commands
 import logging
 from settings import TOKEN
+from stats import stats as get_stats
 
 description = '''Jeff's Discord Bot'''
 
@@ -14,7 +14,9 @@ async def on_ready():
 
 @bot.command()
 async def stats(ctx, ign: str):
-	await ctx.send(ign)
+	esea_link = get_stats(ign)
+	print(esea_link)
+	await ctx.send(esea_link)
 
 logger = logging.getLogger('discord')
 logger.setLevel(logging.DEBUG)
