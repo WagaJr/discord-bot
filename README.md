@@ -2,4 +2,4 @@
   <h3 align="center">Discord Bot</h3>
 
 <p align="center">
-    Using Discord.py
+    Discord.py
