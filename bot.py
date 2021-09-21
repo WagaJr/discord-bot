@@ -21,6 +21,11 @@ async def stats(ctx, ign: str):
 	await ctx.send(embed=embed)
 	# await ctx.send(ctx.author.created_at) make .register method
 
+@bot.command()
+async def register(ctx):
+	# User check if already made
+	return
+
 logger = logging.getLogger('discord')
 logger.setLevel(logging.DEBUG)
 handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
